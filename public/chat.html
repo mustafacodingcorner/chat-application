@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الدردشة</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #4A90E2, #9013FE);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            direction: rtl; /* Set direction to right-to-left */
+        }
+        .container {
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            max-width: 1000px; /* Set max width */
+            margin-left: auto; /* Centering */
+            margin-right: auto; /* Centering */
+            display: flex;
+            flex-direction: column;
+        }
+        #roomName {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFD700; /* Gold color */
+        }
+        .chat-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        #usersList {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            padding: 10px;
+            height: 300px; /* Set height to match messages div */
+            overflow-y: auto; /* Allow vertical scrolling */
+            width: 200px; /* Fixed width for user list */
+            text-align: right; /* Text alignment for RTL */
+        }
+     
+        #usersList h5 {
+            margin-bottom: 10px;      /* Space between title and list */
+            font-size: 18px;          /* Title font size */
+             
+        }
+        
+        #userListItems {
+            list-style-type: none;    /* Remove bullet points */
+            padding: 0;               /* Remove padding */
+            margin: 0;                /* Remove margin */
+        }
+        
+        #userListItems li {
+            padding: 10px;            /* Padding for each list item */
+            border-bottom: 1px solid #ddd; /* Bottom border for separation */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+        
+        #userListItems li:hover {
+            background-color: #e0e0e0; /* Change background on hover */
+        }
+        
+        #userListItems li:last-child {
+            border-bottom: none;       /* Remove bottom border for the last item */
+        }
+        
+        #messages {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            padding: 10px;
+            height: 300px; /* Set height */
+            overflow-y: auto; /* Allow vertical scrolling */
+            margin-left: 10px; /* Space between lists */
+            flex-grow: 1; /* Allow to fill available space */
+            text-align: right; /* Text alignment for RTL */
+        }
+        .message {
+            background-color: rgba(255, 255, 255, 0.8); /* Light background */
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #333; /* Darker text color for contrast */
+        }
+        .username {
+            font-weight: bold;
+            font-size: 0.9em; /* Slightly smaller font size */
+            color: #007bff; /* Blue color for username */
+        }
+        .timestamp {
+            font-size: 0.8em; /* Smaller font size for timestamp */
+            color: #888; /* Light gray for timestamp */
+        }
+        .message-text {
+            margin-top: 5px; /* Space between username/timestamp and message */
+            word-wrap: break-word;
+        }
+        #messageInput {
+            width: calc(100% - 64px); /* Adjust for button */
+            margin-left: 10px; /* Space between input and button */
+        }
+        button {
+            border-radius: 5px;
+            background-color: #007bff; /* Button color */
+            border: 2px solid #0056b3; /* Border color */
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        button:active {
+            transform: translateY(0); /* Reset lift effect on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="roomName">مقهي الافكار</h1>
+        <div class="chat-wrapper">
+            <div id="usersList">
+                <h5>المستخدمون في الغرفة:</h5>
+                <ul id="userListItems">
+                    <li>مصطفي</li>
+                    <li>محمد</li>
+                    <li>احمد</li>
+                    <li>محمود</li>
+                </ul>
+            </div>
+            <div id="messages">
+                <h5>الرسائل:</h5>
+                <div id="messageList">
+                   
+                </div>
+            </div>
+        </div>
+        <form id="messageForm" class="form-inline">
+            <input type="text" id="messageInput" class="form-control" placeholder="اكتب رسالة..." required>
+            <button type="submit" class="btn btn-outline-light">
+                <img src="./images/send.png" width="20">
+            </button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

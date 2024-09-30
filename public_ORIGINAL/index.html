@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دردشة</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet" >
+   
+</head>
+<body>
+    <div class="container">
+        <h2 id="chat-username-title"><img src="./images/emoji/emoji.png" alt="emoji" style="width: 43px; vertical-align: middle;"> 
+            مرحباً بكم في دردشة
+            <img src="./images/emoji/emoji.png" alt="emoji" style="width: 43px; vertical-align: middle;"> 
+        </h2>
+        <form id="joinForm">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="أدخل اسم المستخدم الخاص بك" required>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="room" required>
+                    <option value="">اختر غرفة محادثة</option>
+                    <option value="دردشة الأصدقاء">دردشة الأصدقاء</option>
+                    <option value="ملتقى المحبين">ملتقى المحبين</option>
+                    <option value="مجموعة المرح">مجموعة المرح</option>
+                    <option value="فريق الترفيه">فريق الترفيه</option>
+                    <option value="عالم الإبداع">عالم الإبداع</option>
+                    <option value="جلسة الضحك">جلسة الضحك</option>
+                    <option value="مقهى الأفكار">مقهى الأفكار</option>
+                    <option value="محطة الحوار">محطة الحوار</option>
+                    <option value="لقاء العقول">لقاء العقول</option>
+                    <option value="ساحة النقاش">ساحة النقاش</option>
+                </select>
+                
+            </div>
+            <button type="submit" class="btn btn-lg  btn-primary btn-block">انضم إلى الدردشة</button>
+        </form>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

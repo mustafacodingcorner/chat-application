@@ -1,0 +1,51 @@
+body {
+    background: linear-gradient(to right, #4A90E2, #9013FE);
+    color: white;
+    font-family: 'cairo';
+    direction: rtl;
+}
+.container {
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px; /* Set max width */
+    margin-left: auto; /* Centering */
+    margin-right: auto; /* Centering */
+}
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FFFFFF; /* Change this color as needed */
+}
+#chat-username-title{
+    font-size: 26px;
+}
+.form-control {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+}
+.form-control:focus {
+    background: white;
+    border-color: #FFD700; /* Gold color */
+    box-shadow: 0 0 5px #FFD700;
+}
+button {
+    background-color: #007bff; /* Button color */
+    border: 2px solid #0056b3; /* Border color */
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+button:active {
+    transform: translateY(0); /* Reset lift effect on click */
+}

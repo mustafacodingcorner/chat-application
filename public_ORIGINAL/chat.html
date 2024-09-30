@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الدردشة</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 id="roomName">مقهي الافكار</h1>
+        <div class="chat-wrapper">
+            <div id="usersList">
+                <h5>المستخدمون في الغرفة:</h5>
+                <ul id="userListItems">
+                    <li>مصطفي</li>
+                    <li>محمد</li>
+                    <li>احمد</li>
+                    <li>محمود</li>
+                </ul>
+            </div>
+            <div id="messages">
+                <h5>الرسائل:</h5>
+                <div id="messageList">
+                    <!-- Example message structure -->
+                    <div class="message">
+                        <p class="username"> مصطفي <span class="timestamp">10:30 AM</span></p>
+                        <p class="message-text">هذه هي الرسالة الخاصة بي!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="messageForm" class="form-inline">
+            <input type="text" id="messageInput" class="form-control" placeholder="اكتب رسالة..." required>
+            <button type="submit" class="btn btn-outline-light">
+                <img src="./images/send.png" width="20">
+            </button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

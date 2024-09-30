@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(to right, #4A90E2, #9013FE);
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+.container {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+#roomName {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+.chat-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#usersList {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    width: 200px;
+    text-align: right;
+}
+#usersList h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#userListItems {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#userListItems li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+#userListItems li:hover {
+    background-color: #e0e0e0;
+}
+#userListItems li:last-child {
+    border-bottom: none;
+}
+#messages {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    margin-left: 10px;
+    flex-grow: 1;
+    text-align: right;
+}
+.message {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.username {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #007bff;
+}
+.timestamp {
+    font-size: 0.8em;
+    color: #888;
+}
+.message-text {
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+#messageInput {
+    width: calc(100% - 64px);
+    margin-left: 10px;
+}
+button {
+    border-radius: 5px;
+    background-color: #007bff;
+    border: 2px solid #0056b3;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(0);
+}
